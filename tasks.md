@@ -97,7 +97,7 @@ ORDER BY total_goals DESC, fthg DESC;
 SELECT division_code, season, SUM(fthg+ftag) AS total_goals
 FROM matches
 GROUP BY division_code, season
-ORDER BY total_goals DESC;
+ORDER BY total_goals DESC LIMIT 1;
 
 SELECT name FROM divisions WHERE code = 'EC';
 
